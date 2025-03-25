@@ -35,7 +35,7 @@
               "RelativeDocumentMoniker": "..\\caapivania.Domain\\Entities\\Entity.cs",
               "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\Entity.cs",
               "RelativeToolTip": "..\\caapivania.Domain\\Entities\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T14:50:48.38Z",
               "EditorCaption": ""
@@ -50,7 +50,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:45:08.007Z"
+              "WhenOpened": "2025-03-25T14:45:08.007Z",
+              "EditorCaption": ""
             }
           ]
         }
