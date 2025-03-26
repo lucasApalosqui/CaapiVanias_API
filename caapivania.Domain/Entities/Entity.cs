@@ -10,7 +10,7 @@ namespace caapivania.Domain.Entities
         }
 
         public Guid Id { get; private set; }
-        public string Slug { get; private set; }
+        public string Slug { get; set; }
 
         public bool Equals(Entity other) =>
             Id == other.Id;

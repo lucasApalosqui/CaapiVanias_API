@@ -32,5 +32,23 @@ namespace caapivania.Domain.Contracts
         }
 
         #endregion
+
+        #region Group Contracts
+        public static Contract<GroupEntity> CreateGroup(string name, string description)
+        {
+            return new Contract<GroupEntity>()
+                   .Requires()
+                   .IsBetween(name.Length, 2, 100, "Name", "Name must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 600, "description", "Description must be between 10 and 600 characters");
+        }
+
+        public static Contract<GroupEntity> UpdateGroup(string name, string description)
+        {
+            return new Contract<GroupEntity>()
+                   .Requires()
+                   .IsBetween(name.Length, 2, 100, "Name", "Name must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 600, "description", "Description must be between 10 and 600 characters");
+        }
+        #endregion
     }
 }

@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\DEV\\CaapiVania\\caapivania.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D3D9C046-2C1B-4AB7-83A1-E64465475161}|..\\caapivania.Domain\\caapivania.Domain.csproj|c:\\dev\\caapivania\\caapivania.domain\\entities\\groupentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D9C046-2C1B-4AB7-83A1-E64465475161}|..\\caapivania.Domain\\caapivania.Domain.csproj|c:\\dev\\caapivania\\caapivania.domain\\contracts\\econtract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D9C046-2C1B-4AB7-83A1-E64465475161}|..\\caapivania.Domain\\caapivania.Domain.csproj|c:\\dev\\caapivania\\caapivania.domain\\utils\\slugutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D3D9C046-2C1B-4AB7-83A1-E64465475161}|..\\caapivania.Domain\\caapivania.Domain.csproj|c:\\dev\\caapivania\\caapivania.domain\\entities\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D9C046-2C1B-4AB7-83A1-E64465475161}|..\\caapivania.Domain\\caapivania.Domain.csproj|c:\\dev\\caapivania\\caapivania.domain\\entities\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8BDC475-3E9B-4496-90D7-0416A4406E10}|caapivania.Api.csproj|c:\\dev\\caapivania\\caapivania.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,20 +41,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "SlugUtils.cs",
+              "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Utils\\SlugUtils.cs",
+              "RelativeDocumentMoniker": "..\\caapivania.Domain\\Utils\\SlugUtils.cs",
+              "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Utils\\SlugUtils.cs",
+              "RelativeToolTip": "..\\caapivania.Domain\\Utils\\SlugUtils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T13:08:06.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\Entity.cs",
               "RelativeDocumentMoniker": "..\\caapivania.Domain\\Entities\\Entity.cs",
               "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\Entity.cs",
               "RelativeToolTip": "..\\caapivania.Domain\\Entities\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:50:48.38Z",
+              "WhenOpened": "2025-03-26T13:06:35.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GroupEntity.cs",
+              "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\GroupEntity.cs",
+              "RelativeDocumentMoniker": "..\\caapivania.Domain\\Entities\\GroupEntity.cs",
+              "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\GroupEntity.cs",
+              "RelativeToolTip": "..\\caapivania.Domain\\Entities\\GroupEntity.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowCEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:49:33.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EContract.cs",
+              "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Contracts\\EContract.cs",
+              "RelativeDocumentMoniker": "..\\caapivania.Domain\\Contracts\\EContract.cs",
+              "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Contracts\\EContract.cs",
+              "RelativeToolTip": "..\\caapivania.Domain\\Contracts\\EContract.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T18:06:16.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameEntity.cs",
+              "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\GameEntity.cs",
+              "RelativeDocumentMoniker": "..\\caapivania.Domain\\Entities\\GameEntity.cs",
+              "ToolTip": "C:\\DEV\\CaapiVania\\caapivania.Domain\\Entities\\GameEntity.cs",
+              "RelativeToolTip": "..\\caapivania.Domain\\Entities\\GameEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T17:21:30.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DEV\\CaapiVania\\caapivania.Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
