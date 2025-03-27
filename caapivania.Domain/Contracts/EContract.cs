@@ -50,5 +50,23 @@ namespace caapivania.Domain.Contracts
                    .IsBetween(description.Length, 10, 600, "description", "Description must be between 10 and 600 characters");
         }
         #endregion
+
+        #region Tag Contracts
+        public static Contract<TagEntity> CreateTag(string name, string description)
+        {
+            return new Contract<TagEntity>()
+                   .Requires()
+                   .IsBetween(name.Length, 2, 100, "Name", "Name must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 400, "description", "Description must be between 10 and 400 characters");
+        }
+
+        public static Contract<TagEntity> UpdateTag(string name, string description)
+        {
+            return new Contract<TagEntity>()
+                   .Requires()
+                   .IsBetween(name.Length, 2, 100, "Name", "Name must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 600, "description", "Description must be between 10 and 400 characters");
+        }
+        #endregion
     }
 }

@@ -1,10 +1,5 @@
 ﻿using caapivania.Domain.Contracts;
 using caapivania.Domain.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace caapivania.Domain.Entities
 {
@@ -47,7 +42,8 @@ namespace caapivania.Domain.Entities
 
         private void GenSlug(string name)
         {
-            Slug = SlugUtils.With_One_String(name).ToLower();
+            if(IsValid)
+                Slug = SlugUtils.With_One_String(name).ToLower();
         }
             
 
