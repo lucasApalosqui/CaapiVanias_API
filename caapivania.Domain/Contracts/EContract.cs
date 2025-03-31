@@ -86,5 +86,24 @@ namespace caapivania.Domain.Contracts
                    .IsBetween(description.Length, 10, 600, "description", "Description must be between 10 and 400 characters");
         }
         #endregion
+
+        #region Rate Contracts
+        public static Contract<ReviewEntity> CreateReview(string title, string description, GameEntity game)
+        {
+            return new Contract<ReviewEntity>()
+                   .Requires()
+                   .IsBetween(title.Length, 2, 100, "Title", "Title must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 5000, "description", "Description must be between 10 and 5000 characters")
+                   .IsTrue(game.IsValid, "Game", "Game must be Valid");
+        }
+
+        public static Contract<ReviewEntity> UpdateReview(string title, string description)
+        {
+            return new Contract<ReviewEntity>()
+                   .Requires()
+                   .IsBetween(title.Length, 2, 100, "Title", "Title must be between 2 and 100 characters")
+                   .IsBetween(description.Length, 10, 5000, "description", "Description must be between 10 and 5000 characters");
+        }
+        #endregion
     }
 }
