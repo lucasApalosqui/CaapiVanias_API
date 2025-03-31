@@ -1,5 +1,6 @@
 ﻿using Flunt.Validations;
 using caapivania.Domain.Contracts;
+using caapivania.Domain.Utils;
 
 namespace caapivania.Domain.Entities
 {
@@ -14,6 +15,7 @@ namespace caapivania.Domain.Entities
             ImageUrl = imageurl;
             TrailerUrl = trailerurl;
             GameplayUrl = gameplayurl;
+            GenSlug();
         }
 
         public string Title { get; private set; }
@@ -32,7 +34,13 @@ namespace caapivania.Domain.Entities
                 ImageUrl = imageurl;
                 GameplayUrl = gameplayurl;
                 TrailerUrl = trailerurl;
+                GenSlug();
             }
+        }
+
+        public void GenSlug()
+        {
+            Slug = SlugUtils.With_One_String(Title).ToLower();
         }
     }
 }
