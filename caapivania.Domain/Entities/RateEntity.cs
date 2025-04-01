@@ -21,7 +21,7 @@ namespace caapivania.Domain.Entities
 
         public string Name { get; private set; }
         public string Description { get; private set; }
-
+        public IList<RateReviewEntity> RateReviews { get; private set; } = new List<RateReviewEntity>();
         private void GenSlug()
         {
             if (IsValid)

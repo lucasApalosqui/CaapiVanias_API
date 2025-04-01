@@ -27,6 +27,7 @@ namespace caapivania.Domain.Entities
         public int Average {  get; private set; }
         public GameEntity Game { get; private set; }
         public Guid GameId { get; private set; }
+        public IList<RateReviewEntity> RateReviews { get; private set; } = new List<RateReviewEntity>();
 
         public void UpdateReview(string title, string description)
         {
@@ -37,6 +38,11 @@ namespace caapivania.Domain.Entities
                 Description = description;
                 Date = DateTime.Now;
             }
+        }
+
+        public void CreateRateReview(RateEntity rate, int value)
+        {
+            RateReviews.Add(new RateReviewEntity(this, rate, value));
         }
 
         public void GenSlug()
