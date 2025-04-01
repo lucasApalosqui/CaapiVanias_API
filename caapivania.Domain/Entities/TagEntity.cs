@@ -22,18 +22,6 @@ namespace caapivania.Domain.Entities
         public string Description { get; private set; }
         public IList<GameEntity> Games { get; private set; } = new List<GameEntity>();
 
-        public void AddGame(GameEntity game) //must be modified
-        {
-            if(game.IsValid)
-                Games.Add(game);
-        }
-
-        public void RemoveGame(GameEntity game) //must be modified
-        {
-            if(Games.Contains(game))
-                Games.Remove(game);
-        }
-
         private void GenSlug()
         {
             if(IsValid)

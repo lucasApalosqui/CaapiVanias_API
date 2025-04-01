@@ -8,6 +8,7 @@ namespace caapivania.Tests.Entities
     [TestClass]
     public class GameTests
     {
+        private GameEntity validGame = new GameEntity("castlevania", "apenas uma descrição válida", "https://image", "https://gameplay", "https://trailer");
         [TestMethod]
         public void Given_a_game_with_correct_data_should_be_created()
         {
@@ -76,6 +77,82 @@ namespace caapivania.Tests.Entities
             if (game1.Title == veri.Title && game1.Description == veri.Description && game1.ImageUrl == veri.ImageUrl && game1.GameplayUrl == veri.GameplayUrl && game1.TrailerUrl == veri.TrailerUrl)
                 count = 1;
             Assert.AreEqual(1, count);
+        }
+
+        [TestMethod]
+        public void Add_game_to_valid_group_should_be_added()
+        {
+            var game = validGame;
+            game.AddToGroup(new GroupEntity("On holding", "game must be played"));
+            Assert.AreEqual(game.Group.Name, "On holding");
+        }
+
+        [TestMethod]
+        public void Add_game_to_invalid_group_should_not_be_added()
+        {
+            var game = validGame;
+            game.AddToGroup(new GroupEntity("On holding", "game"));
+            Assert.IsNull(game.Group);
+        }
+
+        [TestMethod]
+        public void Modify_game_to_valid_group_should_be_modified()
+        {
+            var game = validGame;
+            game.AddToGroup(new GroupEntity("On holding", "game must be played"));
+            game.ModifyGroup(new GroupEntity("Playing", "game must be played"));
+            Assert.AreEqual(game.Group.Name, "Playing");
+        }
+
+        [TestMethod]
+        public void Modify_game_to_invalid_group_should_not_be_modified()
+        {
+            var game = validGame;
+            game.AddToGroup(new GroupEntity("On holding", "game must be played"));
+            game.ModifyGroup(new GroupEntity("Playing", "game"));
+            Assert.AreEqual(game.Group.Name, "On holding");
+        }
+
+        [TestMethod]
+        public void Add_valid_review_should_be_added()
+        {
+            var game = validGame;
+            game.CreateReview("My first review", "just a valid description for my review");
+            Assert.IsNotNull(game.Review);
+        }
+
+        [TestMethod]
+        public void Add_invalid_review_should_not_be_added()
+        {
+            var game = validGame;
+            game.CreateReview("My first review", "ju");
+            Assert.IsNull(game.Review);
+        }
+
+        [TestMethod]
+        public void Add_valid_tag_should_be_added()
+        {
+            var game = validGame;
+            game.AddTag(new TagEntity("platformer", "jump in platforms"));
+            Assert.AreEqual(game.Tags.Count, 1);
+        }
+
+        [TestMethod]
+        public void Add_invalid_tag_should_not_be_added()
+        {
+            var game = validGame;
+            game.AddTag(new TagEntity("platformer", "ju"));
+            Assert.AreEqual(game.Tags.Count, 0);
+        }
+
+        [TestMethod]
+        public void remove_tag_should_be_removed()
+        {
+            var game = validGame;
+            var tag = new TagEntity("platformer", "jump in platforms");
+            game.AddTag(tag);
+            game.RemoveTag(tag);
+            Assert.AreEqual(game.Tags.Count, 0);
         }
 
     }

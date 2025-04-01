@@ -75,29 +75,5 @@ namespace caapivania.Tests.Entities
             Assert.IsTrue(verify);
         }
 
-        [TestMethod]
-        public void Add_valid_game_in_group_should_be_sucessfully_added()
-        {
-            var group = validGroup;
-            group.AddGameToGroup(validGame);
-            Assert.AreEqual(group.Games.Count, 1);
-        }
-
-        [TestMethod]
-        public void Add_invalid_game_in_group_should_be_not_sucessfully_added()
-        {
-            var group = validGroup;
-            group.AddGameToGroup(invalidGame);
-            Assert.AreEqual(group.Games.Count, 0);
-        }
-
-        [TestMethod]
-        public void Remove_game_in_group_should_be_sucessfully_removed()
-        {
-            var group = validGroup;
-            group.AddGameToGroup(validGame);
-            group.RemoveGameToGroup(validGame);
-            Assert.AreEqual(group.Games.Count, 0);
-        }
     }
 }

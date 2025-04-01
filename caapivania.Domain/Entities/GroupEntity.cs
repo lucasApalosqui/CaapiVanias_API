@@ -17,18 +17,6 @@ namespace caapivania.Domain.Entities
         public string Description { get; private set; }
         public IList<GameEntity> Games { get; private set; } = new List<GameEntity>();
 
-        public void AddGameToGroup(GameEntity game)
-        {
-            if (game.IsValid)
-                Games.Add(game);
-        }
-
-        public void RemoveGameToGroup(GameEntity game)
-        {
-            if(Games.Contains(game))
-                Games.Remove(game);
-        }
-
         public void UpdateGroup(string name, string description)
         {
             AddNotifications(EContract.UpdateGroup(name, description));
