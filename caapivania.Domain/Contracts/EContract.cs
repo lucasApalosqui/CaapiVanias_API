@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace caapivania.Domain.Contracts
 {
@@ -103,6 +104,24 @@ namespace caapivania.Domain.Contracts
                    .Requires()
                    .IsBetween(title.Length, 2, 100, "Title", "Title must be between 2 and 100 characters")
                    .IsBetween(description.Length, 10, 5000, "description", "Description must be between 10 and 5000 characters");
+        }
+        #endregion
+
+        #region RateReview Contracts
+        public static Contract<RateReviewEntity> CreateRateReview(ReviewEntity review, RateEntity rate, int value)
+        {
+            return new Contract<RateReviewEntity>()
+                   .Requires()
+                   .IsBetween(value, 1, 10, "Value", "The Value must between 1 and 10")
+                   .IsTrue(rate.IsValid, "Rate", "Rate must be valid")
+                   .IsTrue(review.IsValid, "Review", "Review must be valid");
+        }
+
+        public static Contract<RateReviewEntity> UpdateRateReview(int value)
+        {
+            return new Contract<RateReviewEntity>()
+                   .Requires()
+                   .IsBetween(value, 1, 10, "Value", "The Value must between 1 and 10");
         }
         #endregion
     }
