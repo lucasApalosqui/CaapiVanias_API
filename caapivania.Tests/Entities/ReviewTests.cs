@@ -47,5 +47,45 @@ namespace caapivania.Tests.Entities
                 validator = true;
             Assert.IsFalse(validator);
         }
+
+        [TestMethod]
+        public void Create_rateReview_With_correct_data_should_be_created()
+        {
+            var review = validReview;
+            review.CreateRateReview(new RateEntity("Difficulty", "Just a valid description"), 6);
+
+            Assert.AreEqual(review.RateReviews.Count, 1);
+        }
+
+        [TestMethod]
+        public void Create_RateReview_With_inorrect_data_should_not_be_created()
+        {
+            var review = validReview;
+            review.CreateRateReview(new RateEntity("Difficulty", "Just a valid description"), 0);
+
+            Assert.AreEqual(review.RateReviews.Count, 0);
+        }
+
+        [TestMethod]
+        public void Att_Average_With_RateReviews_should_return_correct_average()
+        {
+            var review = validReview;
+            review.CreateRateReview(new RateEntity("Difficulty", "Just a valid description"), 5);
+            review.CreateRateReview(new RateEntity("Progress", "Just a valid description"), 8);
+            review.CreateRateReview(new RateEntity("Lore", "Just a valid description"), 6);
+            review.CreateRateReview(new RateEntity("Gameplay", "Just a valid description"), 9);
+            review.AttAverage();
+
+            Assert.AreEqual(review.Average, 7);
+        }
+
+        [TestMethod]
+        public void Att_Average_With_no_RateReviews_should_return_correct_average()
+        {
+            var review = validReview;
+            review.CreateRateReview(new RateEntity("Difficulty", "invalid"), 5);
+            review.AttAverage();
+            Assert.AreEqual(review.Average, 0);
+        }
     }
 }

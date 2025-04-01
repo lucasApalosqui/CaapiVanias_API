@@ -18,6 +18,7 @@ namespace caapivania.Domain.Entities
             Game = game;
             GameId = game.Id;
             Date = DateTime.Now;
+            Average = 0;
             GenSlug();
         }
 
@@ -40,9 +41,30 @@ namespace caapivania.Domain.Entities
             }
         }
 
+        public void AttAverage()
+        {
+            if(RateReviews.Count > 0)
+            {
+                int value = 0;
+                foreach(var rateReview in RateReviews)
+                {
+                    value += rateReview.Value;
+                }
+                Average = value / RateReviews.Count;
+            }
+            else
+            {
+                Average = 0;
+            }
+
+            
+        }
+
         public void CreateRateReview(RateEntity rate, int value)
         {
-            RateReviews.Add(new RateReviewEntity(this, rate, value));
+            var reviewRate = new RateReviewEntity(this, rate, value);
+            if(reviewRate.IsValid)
+                RateReviews.Add(reviewRate);
         }
 
         public void GenSlug()
